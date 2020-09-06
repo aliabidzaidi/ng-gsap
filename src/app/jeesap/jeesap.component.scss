@@ -1,0 +1,39 @@
+section {
+  min-height: 90vh;
+  margin: 10px;
+}
+
+div {
+  text-align: center;
+}
+
+.box1 {
+  position: relative;
+  height: 50px;
+  width: 200px;
+  margin: 10px auto 30px auto;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #ececec;
+  opacity: 0;
+  // transition: all 0.2s ease-in-out;
+  color: #2e3f94;
+  font-weight: 500;
+}
+.box1:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+button {
+  opacity: 0;
+  margin: 10px;
+}
+
+#box2 {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #8b8325;
+}
