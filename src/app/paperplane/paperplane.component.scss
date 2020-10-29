@@ -1,0 +1,65 @@
+div{
+  background-color: #000;
+  color: #fff;
+
+}
+
+.section1, .section3{
+  min-height: 100vh;
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 60px;
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.content-box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 400px;
+  width: 50%;
+  font-size: 50px;
+  padding-left: 5em;
+}
+
+
+.images-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.heading{
+  opacity: 0;
+  position: absolute;
+  top: 2em;
+}
+
+.scroll-img{
+  height: 400px;
+  // display: none;
+  opacity: 0;
+  position: absolute;
+  top: 5em;
+}
+
+.active{
+  opacity: 1;
+  // display: block;
+}
+
+html { background-color: black; }

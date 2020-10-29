@@ -6,7 +6,7 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { TimelineLite, Back, Power1, gsap } from 'gsap';
+import { TimelineLite, TweenLite, Back, Power1, gsap } from 'gsap';
 import { Subscription, fromEvent } from 'rxjs';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -36,6 +36,8 @@ export class JeesapComponent implements OnInit {
       }
     );
     this.scroll();
+    gsap.to('#text1', 5, { color: "rgba(255,0,0,1)",yoyo: true, repeat: 100 });
+    gsap.to('#text2', 5, { textShadow: "2px 2px 5px rgb(218,165,32)",yoyo: true, repeat: 100 });
   }
 
   scroll() {
@@ -44,14 +46,18 @@ export class JeesapComponent implements OnInit {
         trigger: '#box2',
         start: 'top 80%',
         end: '+=400s',
-        // scrub: 1,
-        toggleActions: 'start pause resume pause',
+        scrub: 1,
+        toggleActions: 'resume pause resume pause',
         // ^ onEnter, onLeave, onEnterBack, onLeaveBack
-        markers: true,
+        // markers: true,
+        
       },
       x: 400,
       rotation: 360,
-      duration: 3,
+      // duration: 3,
+      // yoyo: true,
+      // repeat: 100,
+      // repeatDelay: 1
     });
   }
 
