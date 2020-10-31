@@ -1,0 +1,38 @@
+// .parent {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 3000px;
+//   background-color: #020714;
+//   color: #143D93;
+//   div {
+//     display: flex;
+//     align-items: center;
+//   }
+
+// }
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.scrollElement {
+  position: absolute;
+  height: 6000px;
+  width: 100px;
+  top: 0;
+  z-index: 0;
+}
