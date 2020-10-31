@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { JeesapComponent } from './jeesap/jeesap.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PaperplaneComponent } from './paperplane/paperplane.component';
+import { SlidingComponent } from './sliding/sliding.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PaperplaneComponent } from './paperplane/paperplane.component';
     JeesapComponent,
     HomepageComponent,
     PaperplaneComponent,
+    SlidingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

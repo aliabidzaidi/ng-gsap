@@ -1,0 +1,29 @@
+.section1 {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  
+  h1{
+    font-size: 3.5em;
+    padding: 20px;
+  }
+
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    
+    .svgDiv {
+      display: flex;
+      justify-content: center;
+
+      svg {
+        height: 10em;
+      }
+    }
+
+    .remarks{
+      text-align: right;
+    }
+  }
+}

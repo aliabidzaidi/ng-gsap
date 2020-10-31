@@ -1,13 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ElementRef,
-  QueryList,
-  ViewChild,
-  ViewChildren,
-} from '@angular/core';
-import { TimelineMax, TimelineLite, TweenLite, Back, Power1, gsap } from 'gsap';
-import { Subscription, fromEvent } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
@@ -16,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   styleUrls: ['./paperplane.component.scss'],
 })
 export class PaperplaneComponent implements OnInit {
-  
   constructor() {}
 
   ngOnInit(): void {}
@@ -34,8 +25,7 @@ export class PaperplaneComponent implements OnInit {
     this.setScrollImages();
   }
 
-  setScrollText(){
-    
+  setScrollText() {
     gsap.to('#heading1', {
       scrollTrigger: {
         trigger: '#heading1',
@@ -76,7 +66,6 @@ export class PaperplaneComponent implements OnInit {
       opacity: 1,
     });
 
-    
     gsap.to('#heading5', {
       scrollTrigger: {
         trigger: '#heading5',
@@ -86,11 +75,9 @@ export class PaperplaneComponent implements OnInit {
       },
       opacity: 1,
     });
-
   }
 
   setScrollImages() {
-
     gsap.to('#img1', {
       scrollTrigger: {
         trigger: '#img1',
@@ -131,7 +118,6 @@ export class PaperplaneComponent implements OnInit {
       opacity: 1,
     });
 
-    
     gsap.to('#img5', {
       scrollTrigger: {
         trigger: '#img5',
