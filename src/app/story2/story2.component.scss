@@ -1,0 +1,19 @@
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 61px);
+  background-color: #020714;
+  color: #143d93;
+  #dialogues {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+#dialogues h1{
+  position:absolute;
+  font-size: 4em;
+}

@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PaperplaneComponent } from './paperplane/paperplane.component';
 import { Story1Component } from './story1/story1.component';
+import { Story2Component } from './story2/story2.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'jeesap', component: JeesapComponent },
   { path: 'paperplane', component: PaperplaneComponent },
   { path: 'story1', component: Story1Component },
+  { path: 'story2', component: Story2Component },
   { path: '**', component: HomepageComponent },
 ];
 
