@@ -22,22 +22,6 @@ export class Story1Component implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    // ScrollTrigger.create({
-    //   trigger: '.parent',
-    //   start: 'top top',
-    //   end: '2000px',
-    //   onToggle: (self) => console.log('toggling scrolltrigger'),
-    //   onUpdate: (self) => {
-    //     console.log(
-    //       'progress:',
-    //       self.progress.toFixed(3),
-    //       'direction:',
-    //       self.direction,
-    //       'velocity',
-    //       self.getVelocity()
-    //     );
-    //   },
-    // });
     this.loadStory();
   }
 
@@ -95,6 +79,7 @@ export class Story1Component implements OnInit {
           onLeave: function () {
             gsap.to('#bird', { scaleX: -1, rotation: -15 });
           },
+          markers: true,
         },
       }
     );

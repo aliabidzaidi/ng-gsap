@@ -15,7 +15,7 @@ export class Story2Component implements OnInit {
     '⛄❄',
   ];
 
-  animation = gsap.timeline({ repeat: 5, repeatDelay: 1 });
+  animation = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
   constructor() {}
 

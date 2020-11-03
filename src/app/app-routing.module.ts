@@ -6,6 +6,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PaperplaneComponent } from './paperplane/paperplane.component';
 import { Story1Component } from './story1/story1.component';
 import { Story2Component } from './story2/story2.component';
+import { Story3Component } from './story3/story3.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'paperplane', component: PaperplaneComponent },
   { path: 'story1', component: Story1Component },
   { path: 'story2', component: Story2Component },
+  { path: 'story3', component: Story3Component },
   { path: '**', component: HomepageComponent },
 ];
 

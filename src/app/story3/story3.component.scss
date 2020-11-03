@@ -15,14 +15,18 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - 61px);
-  background-color: #020714;
-  color: #143d93;
+  background-color: #FBC817;
+  color: #000;
   font-family: Rockwell;
-  #dialogues {
+  #child {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    svg{
+      height: 40vh;
+    }
 
     h1 {
       position: absolute;
