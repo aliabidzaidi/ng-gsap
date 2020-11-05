@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -17,7 +17,7 @@ export class Story2Component implements OnInit {
 
   animation = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
-  constructor() {}
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +26,10 @@ export class Story2Component implements OnInit {
 
   ngAfterViewInit(): void {
     this.loadStory();
+  }
+
+  ngOndestroy() {
+    this.elementRef.nativeElement.remove();
   }
 
   addAllDialogues() {

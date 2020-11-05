@@ -1,14 +1,4 @@
-@mixin smallScreen() {
-  font-size: 3em;
-}
-
-@mixin mediumScreen() {
-  font-size: 4em;
-}
-
-@mixin largeScreen() {
-  font-size: 5em;
-}
+@import '../app.component.scss';
 
 .parent {
   display: flex;

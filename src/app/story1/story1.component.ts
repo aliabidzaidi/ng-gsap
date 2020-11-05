@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,7 +15,7 @@ export class Story1Component implements OnInit {
     '⛄❄',
   ];
 
-  constructor() {}
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger);
@@ -23,6 +23,11 @@ export class Story1Component implements OnInit {
 
   ngAfterViewInit(): void {
     this.loadStory();
+  }
+
+  ngOndestroy() {
+    this.elementRef.nativeElement.remove();
+    
   }
 
   loadStory() {
@@ -79,7 +84,6 @@ export class Story1Component implements OnInit {
           onLeave: function () {
             gsap.to('#bird', { scaleX: -1, rotation: -15 });
           },
-          markers: true,
         },
       }
     );

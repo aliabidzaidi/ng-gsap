@@ -10,17 +10,25 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
-  color: white;
+  background-color: #dccec0;
+  color: #be5d4e;
   font-weight: 600;
 
-  .github{
+  .github {
     margin: 0 10px;
   }
 }
 
-.toolbar img {
+.toolbar img,
+.toolbar svg {
+  fill: #be5d4e;
   margin: 0 16px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    fill: #a72c1f;
+  }
 }
 
 .toolbar #twitter-logo {
@@ -37,14 +45,14 @@ span {
   a:active,
   a:visited,
   a:focus {
-    color: white;
+    color: #be5d4e;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
   }
   a:hover {
     transition: all 0.2s ease-in-out;
-    color: #aaaaaa;
+    color: #a72c1f;
   }
   margin: 0 10px;
 }

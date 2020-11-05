@@ -1,0 +1,57 @@
+@import "../app.component.scss";
+
+* {
+  background-color: #2c4037;
+  color: #e97363;
+  margin: 0;
+}
+
+.parent {
+  z-index: -100;
+  margin-top: -61px;
+  padding-top: 61px;
+  display: flex;
+  justify-content: center;
+  font-family: Rockwell;
+  position: fixed;
+  overflow: hidden;
+  // height: calc(100vh -61px);
+  height: 100vh;
+
+  .story {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .blurb {
+      opacity: 0;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  @media only screen and (min-width: 1025px) {
+    @include largeScreen;
+  }
+  @media only screen and (max-width: 1024px) {
+    @include mediumScreen;
+  }
+  @media only screen and (max-width: 770px) {
+    @include smallScreen;
+  }
+}
+
+.scrollElement {
+  height: 6000px;
+  width: 100%;
+  top: 0;
+  z-index: -10;
+
+  .story{
+    position: fixed;
+    width: 100%;
+    // height: calc(100vh - 61px);
+    padding-top: 20vh;
+  }
+}
