@@ -9,7 +9,6 @@ import * as Splitting from 'splitting';
   styleUrls: ['./story4.component.scss'],
 })
 export class Story4Component implements OnInit {
-
   constructor() {}
 
   ngOnInit(): void {
@@ -56,23 +55,36 @@ export class Story4Component implements OnInit {
     });
 
     let padding = 1;
-  
+
     words.forEach((element, index) => {
       console.log(element);
       padding = padding + padding;
 
       element.childNodes.forEach((child, childIndex) => {
-        
-        scene1.from(child, 
-          { 
-            // scrollTrigger:{
-            //   scrub:true, 
-            //   markers: true,
-            // }, 
-            opacity: 0 
-          });
+        scene1.from(child, {
+          // scrollTrigger:{
+          //   scrub:true,
+          //   markers: true,
+          // },
+          opacity: 0,
+        });
       });
     });
     // scene1.to('');
+
+    gsap.fromTo(
+      '.arrow',
+      { opacity: 1 },
+      {
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.scrollElement',
+          start: 'top top',
+          end: '+=400',
+          scrub: 1,
+        },
+        opacity: 0,
+      }
+    );
   }
 }
